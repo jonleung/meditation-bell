@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <p>curMinutes = {curMinutes}</p>
-      <Sit startTime="9:30 AM" endTime="9:40 AM"/>
+      <Sit startTime="7:25 PM" endTime="7:26 PM" curMinutes={curMinutes}/>
     </div>
   );
 }
