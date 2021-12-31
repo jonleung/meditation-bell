@@ -28,35 +28,37 @@ function App() {
   return (
     <div className="App">
       <Start/>
-      <div className="clock">
-        <p>{curTime.format("h:mm:ss a")}</p>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Start</th>
-            <th>End</th>
-          </tr>
-        </thead>
-        <tbody>
-          {bellData.map((sit, i) => {
-            return <Sit key={i} startTime={sit.start} endTime={sit.end} curMinutes={curMinutes} />;
-          })}
-          <tr>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-          </tr>
-          <tr>
-            <th>
-              <ManualBell type="start"/>
-            </th>
-            <th>
-              <ManualBell type="end"/>
-            </th>
-          </tr>
-        </tbody>
-      </table>
-      <div className="manual-bell">
+      <div className="container">
+        <div className="clock">
+          <p>{curTime.format("h:mm:ss a")}</p>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Start</th>
+              <th>End</th>
+            </tr>
+          </thead>
+          <tbody>
+            {bellData.map((sit, i) => {
+              return <Sit key={i} startTime={sit.start} endTime={sit.end} curMinutes={curMinutes} />;
+            })}
+            <tr>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+            </tr>
+            <tr>
+              <th>
+                <ManualBell type="start"/>
+              </th>
+              <th>
+                <ManualBell type="end"/>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+        <div className="manual-bell">
+        </div>
       </div>
     </div>
   );
