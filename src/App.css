@@ -22,6 +22,22 @@ table {
   border-collapse: collapse;
 }
 
+.title {
+  font-size: 21px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 400;
+
+  margin-bottom: 10px;
+}
+
 .Cover {
   position: fixed;
   width: 100%;
@@ -50,6 +66,7 @@ table {
 }
 
 .App__container {
+  margin-top: 5vh;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -57,7 +74,6 @@ table {
 }
 
 .Clock {
-  margin-top: 5vh;
   font-size: 30px;
 }
 
@@ -65,25 +81,25 @@ table {
   font-weight: 600;
 }
 
-table {
-  margin-top: 25px;
+.BellSchedule table {
   margin-left: auto;
   margin-right: auto;
+  width: 200px;
 }
 
-thead th {
+.BellSchedule thead th {
   font-weight: 800;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-tbody th {
+.BellSchedule tbody th {
   font-weight: 400;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-th {
+.BellSchedule th {
   border: 1px solid gray;
 }
 

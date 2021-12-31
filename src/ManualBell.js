@@ -9,7 +9,7 @@ const ManualBell = (props) => {
   const typeString = props.type === "start" ? "Start" : "End"
 
   return (
-    <button onClick={playSound}>🔔 Play {typeString} Bell</button>
+    <button onClick={playSound}>🔔&nbsp;&nbsp;{typeString} Bell</button>
   )
 }
 
