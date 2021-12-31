@@ -23,14 +23,15 @@ table {
 }
 
 body {
-  background-color: black;
-  color: #D0C4A0;
+  /*background-color: black;*/
+  /*color: #D0C4A0;*/
 }
 
 .title {
   font-size: 21px;
   padding-bottom: 5px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid black/*#D0C4A0*/;
+;
 
   margin-top: 60px;
   margin-bottom: 10px;
@@ -57,14 +58,14 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  margin-top: 10vh;
+  margin-top: 15vh;
   padding: 15px;
   text-align: center;
   /*border: 2px solid white;*/
 }
 
 .Cover__button-text {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .hide {

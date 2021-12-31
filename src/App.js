@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <Cover />
+      <Cover on={bellData.length >= 1}/>
       <div className="App__container">
         <Clock curTime={curTime} />
         <BellSchedule bellData={bellData} curMinutes={curMinutes} />

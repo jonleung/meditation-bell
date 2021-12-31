@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Cover = (props) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(props.on);
 
   function hide() {
     setIsVisible(false);
