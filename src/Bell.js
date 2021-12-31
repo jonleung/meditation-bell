@@ -9,18 +9,17 @@ const Bell = (props) => {
   const bellSound = props.type === 'start' ? bellStart : bellEnd;
   const [playSound] = useSound(bellSound);
 
-  const [hasRung, setHasRung] = useState(false);
+  const [hasRungThisMinute, setHasRungThisMinute] = useState(false);
   const timeToRing = moment(props.timeToRingString, "h:mm AM/PM");
   const minuteToRing = minutesOfDay(timeToRing);
 
-  if (!hasRung && props.curMinutes === minuteToRing) {
-    setHasRung(true);
+  if (!hasRungThisMinute && props.curMinutes === minuteToRing) {
+    setHasRungThisMinute(true);
     playSound();
     console.log(`🔔 ${minuteToRing}`);
-  } else if (hasRung && props.curMinutes !== minuteToRing) {
-    setHasRung(false);
+  } else if (hasRungThisMinute && props.curMinutes !== minuteToRing) {
+    setHasRungThisMinute(false);
   }
-
 
   return (
     <th>{props.timeToRingString}</th>
