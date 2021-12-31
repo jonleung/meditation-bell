@@ -4,6 +4,7 @@ import moment from 'moment';
 import { minutesOfDay } from './helpers';
 import Sit from './Sit';
 import ManualBell from './ManualBell';
+import Start from './Start';
 
 function App() {
   const [curMinutes, setCurMinutes] = useState(minutesOfDay(moment()));
@@ -19,11 +20,14 @@ function App() {
       setCurMinutes(minutesOfDay(moment()));
       setCurTime(moment());
     }, 1000);
-    return function cleanup() {};
-  }, [curMinutes, curTime]) // https://stackoverflow.com/questions/55240526/useeffect-second-argument-variations-in-react-hook
+    return function cleanup() {
+      clearInterval(intervalId)
+    };
+  }) // https://stackoverflow.com/questions/55240526/useeffect-second-argument-variations-in-react-hook
 
   return (
     <div className="App">
+      <Start/>
       <p>curMinutes = {curMinutes}</p>
       <p>curTime = {curTime.format("h:mm:ss a")}</p>
       <table>
