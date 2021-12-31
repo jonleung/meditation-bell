@@ -8,10 +8,8 @@ const Start = (props) => {
   }
 
   return (
-    <div className={`Cover ${isVisible ? 'show' : 'hide'}`} onClick={hide}>
-      <div className="Cover-button">
-        <p className="Cover-button-text">Click To Start</p>
-      </div>
+    <div className={`cover-box ${isVisible ? 'show' : 'hide'}`} onClick={hide}>
+      <p className="cover-text">Click to Start</p>
     </div>
   )
 }

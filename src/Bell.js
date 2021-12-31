@@ -20,7 +20,7 @@ const Bell = (props) => {
   }
 
   return (
-    <th>{props.timeToRingString} ({minuteToRing})</th>
+    <th>{props.timeToRingString}</th>
   )
 }
 
