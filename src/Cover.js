@@ -9,8 +9,8 @@ const Cover = (props) => {
 
   return (
     <div className={`Cover ${isVisible ? 'show' : 'hide'}`} onClick={hide}>
-      <div className="Cover-button">
-        <p className="Cover-button-text">Click Anywhere to Continue...</p>
+      <div className="Cover__button">
+        <p className="Cover__button-text">Click Anywhere to Continue...</p>
       </div>
     </div>
   )

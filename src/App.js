@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <Cover />
-      <div className="App-container">
+      <div className="App__container">
         <Clock curTime={curTime} />
         <BellSchedule bellData={bellData} curMinutes={curMinutes} />
         <ManualBells/>

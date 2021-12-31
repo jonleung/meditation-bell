@@ -31,7 +31,7 @@ table {
   cursor: pointer;
 }
 
-.Cover-button {
+.Cover__button {
   margin-left: auto;
   margin-right: auto;
 
@@ -41,23 +41,29 @@ table {
   /*border: 2px solid white;*/
 }
 
+.Cover__button-text {
+  font-size: 30px;
+}
+
 .hide {
   display: none;
 }
 
-.App-container {
-  text-align: center;
-  width: 250px;
+.App__container {
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  width: 250px;
 }
 
-.clock {
+.Clock {
   margin-top: 5vh;
   font-size: 30px;
-  font-weight: 600;
 }
 
+.Clock__text {
+  font-weight: 600;
+}
 
 table {
   margin-top: 25px;

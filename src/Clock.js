@@ -1,7 +1,7 @@
 const Clock = (props) => {
   return (
-    <div className="clock-container">
-      <p className="clock">{props.curTime.format("h:mm:ss a")}</p>
+    <div className="Clock">
+      <p className="Clock__text">{props.curTime.format("h:mm:ss a")}</p>
     </div>
   )
 }
