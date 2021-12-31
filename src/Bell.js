@@ -17,7 +17,10 @@ const Bell = (props) => {
     setHasRung(true);
     playSound();
     console.log(`🔔 ${minuteToRing}`);
+  } else if (hasRung && props.curMinutes !== minuteToRing) {
+    setHasRung(false);
   }
+
 
   return (
     <th>{props.timeToRingString}</th>
