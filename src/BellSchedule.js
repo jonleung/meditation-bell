@@ -1,6 +1,7 @@
 import Sit from './Sit';
 
 const BellSchedule = (props) => {
+
   return (
     <div className="BellSchedule">
       <h1 className="BellSchedule__title title">Automatic Bell Schedule</h1>
