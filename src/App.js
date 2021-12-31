@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import moment from 'moment';
 import { minutesOfDay } from './helpers';
-import Sit from './Sit';
-import ManualBell from './ManualBell';
 import Cover from './Cover';
-import Clock from './Clock'
+import Clock from './Clock';
+import BellSchedule from './BellSchedule';
+import ManualBells from './ManualBells';
 
 function App() {
   const [curMinutes, setCurMinutes] = useState(minutesOfDay(moment()));
@@ -30,32 +30,9 @@ function App() {
     <div className="App">
       <Cover />
       <div className="App-container">
-        <Clock curTime={curTime}/>
-        <table>
-          <thead>
-            <tr>
-              <th>Start Bell</th>
-              <th>End Bell</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bellData.map((sit, i) => {
-              return <Sit key={i} startTime={sit.start} endTime={sit.end} curMinutes={curMinutes} />;
-            })}
-            <tr>
-              <th>&nbsp;</th>
-              <th>&nbsp;</th>
-            </tr>
-            <tr>
-              <th>
-                <ManualBell type="start"/>
-              </th>
-              <th>
-                <ManualBell type="end"/>
-              </th>
-            </tr>
-          </tbody>
-        </table>
+        <Clock curTime={curTime} />
+        <BellSchedule bellData={bellData} curMinutes={curMinutes} />
+        <ManualBells/>
       </div>
     </div>
   );
