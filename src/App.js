@@ -5,6 +5,7 @@ import { minutesOfDay } from './helpers';
 import Sit from './Sit';
 import ManualBell from './ManualBell';
 import Cover from './Cover';
+import Clock from './Clock'
 
 function App() {
   const [curMinutes, setCurMinutes] = useState(minutesOfDay(moment()));
@@ -29,9 +30,7 @@ function App() {
     <div className="App">
       <Cover />
       <div className="App-container">
-        <div className="clock-container">
-          <p className="clock">{curTime.format("h:mm:ss a")}</p>
-        </div>
+        <Clock curTime={curTime}/>
         <table>
           <thead>
             <tr>
