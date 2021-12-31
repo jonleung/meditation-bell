@@ -14,7 +14,7 @@ function App() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const bellDataString = urlParams.get('bellData')
-  const bellData = JSON.parse(bellDataString);
+  const bellData = bellDataString === null ? [] : JSON.parse(bellDataString);
 
   useEffect(() => {
     let intervalId = setInterval(() => {
