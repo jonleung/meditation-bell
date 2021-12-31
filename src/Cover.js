@@ -10,12 +10,14 @@ const Cover = (props) => {
   return (
     <div className={`Cover ${isVisible ? 'show' : 'hide'}`} onClick={hide}>
       <div className="Cover__button">
-        <p className="Cover__button-text">1) Set your computer's speaker to maximum volume</p>
+        <p className="Cover__button-text">1) Set your computer's speaker to maximum volume.</p>
         <br/>
-        <p className="Cover__button-text">2) Then click anywhere to continue</p>
+        <p className="Cover__button-text">2) Share your computer sound in Zoom.</p>
+        <br/>
+        <p className="Cover__button-text">3) Then click anywhere to continue.</p>
       </div>
     </div>
-  )
+  );
 }
 
 export default Cover
