@@ -4,10 +4,10 @@ import Bell from './Bell';
 
 const Sit = (props) => {
   return (
-    <div>
+    <tr>
       <Bell type="start" timeToRingString={props.startTime} curMinutes={props.curMinutes} />
       <Bell type="end" timeToRingString={props.endTime}  curMinutes={props.curMinutes}/>
-    </div>
+    </tr>
   )
 }
 

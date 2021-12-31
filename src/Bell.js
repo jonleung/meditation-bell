@@ -6,8 +6,8 @@ import bellStart from './sounds/bell_start.mp3'; //3x
 import bellEnd from './sounds/bell_end.mp3'; //1x
 
 const Bell = (props) => {
-  const [playBellStart] = useSound(bellStart);
-  const [playBellEnd] = useSound(bellEnd);
+  const bellSound = props.type === 'start' ? bellStart : bellEnd;
+  const [playSound] = useSound(bellSound);
 
   const [hasRung, setHasRung] = useState(false);
   const timeToRing = moment(props.timeToRingString, "h:mm AM/PM");
@@ -15,12 +15,12 @@ const Bell = (props) => {
 
   if (!hasRung && props.curMinutes === minuteToRing) {
     setHasRung(true);
-    playBellEnd()
+    playSound();
     console.log(`🔔 ${minuteToRing}`);
   }
 
   return (
-    <div>{props.timeToRingString} ({minuteToRing})</div>
+    <th>{props.timeToRingString} ({minuteToRing})</th>
   )
 }
 
