@@ -56,8 +56,6 @@ function App() {
             </tr>
           </tbody>
         </table>
-        <div className="manual-bell">
-        </div>
       </div>
     </div>
   );
