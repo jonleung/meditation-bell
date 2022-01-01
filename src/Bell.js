@@ -10,10 +10,11 @@ const Bell = (props) => {
   const [playSound] = useSound(bellSound);
 
   const [hasRungThisMinute, setHasRungThisMinute] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(true);
   const timeToRing = moment(props.timeToRingString, "h:mm AM/PM");
   const minuteToRing = minutesOfDay(timeToRing);
 
-  if (!hasRungThisMinute && props.curMinutes === minuteToRing) {
+  if (isEnabled && !hasRungThisMinute && props.curMinutes === minuteToRing) {
     setHasRungThisMinute(true);
     playSound();
     console.log(`🔔 ${minuteToRing}`);
@@ -21,8 +22,12 @@ const Bell = (props) => {
     setHasRungThisMinute(false);
   }
 
+  function toggleIsEnabled() {
+    setIsEnabled(!isEnabled);
+  }
+
   return (
-    <th>{props.timeToRingString}</th>
+    <th className={isEnabled === false ? 'disabled' : 'enabled'} onClick={toggleIsEnabled}>{props.timeToRingString}</th>
   )
 }
 

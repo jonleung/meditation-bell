@@ -104,10 +104,20 @@ body {
   font-weight: 400;
   padding-top: 5px;
   padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.BellSchedule tbody th:hover {
+  text-decoration: line-through;
 }
 
 .BellSchedule th {
   border: 1px solid gray;
+}
+
+.disabled {
+  text-decoration: line-through;
+  color: #BBB;
 }
 
 

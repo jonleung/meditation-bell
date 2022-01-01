@@ -5,7 +5,7 @@ const BellSchedule = (props) => {
   function renderBellSchedule(props) {
     return (
       <>
-        <h2 className="BellSchedule__description description">The bells will ring automatically at their scheduled times below:</h2>
+        <h2 className="BellSchedule__description description">The bells will ring automatically at their scheduled times below. Click to disable a scheduled bell. Click again to re-enable.</h2>
         <table>
           <thead>
             <tr>
