@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from 'react';
 
 const Cover = (props) => {
-  const [isVisible, setIsVisible] = useState(props.on);
+  const [messageNumber, setMessageNumber] = useState(0);
 
-  function hide() {
-    setIsVisible(false);
+  function increment() {
+    setMessageNumber(messageNumber+1);
   }
 
+  const MESSAGES = [
+    "1) Disable computer notifications",
+    "2) Close any programs that make sound",
+    "3) Set your computer's volume to max",
+    "4) Share your computer sound in Zoom"
+  ]
+
   return (
-    <div className={`Cover ${isVisible ? 'show' : 'hide'}`} onClick={hide}>
-      <div className="Cover__button">
-        <p className="Cover__button-text">1) Silence notifications & any programs that make sound (aText)</p>
-        <br/>
-        <p className="Cover__button-text">2) Set your computer's speaker to maximum volume.</p>
-        <br/>
-        <p className="Cover__button-text">3) Share your computer sound in Zoom.</p>
-        <br/>
-        <p className="Cover__button-text">4) Then click anywhere to continue.</p>
-      </div>
+    <div className={`Cover ${messageNumber < MESSAGES.length ? 'show' : 'hide'}`}>
+        <div className="Cover__plaque">
+          <p className="Cover__plaque-text">
+            {MESSAGES[messageNumber]}
+          </p>
+          <button onClick={increment} className="Cover__button">
+            {messageNumber === MESSAGES.length - 1 ? 'Done' : 'Next'}
+          </button>
+        </div>
     </div>
   );
 }

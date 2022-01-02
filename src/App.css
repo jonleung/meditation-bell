@@ -51,10 +51,9 @@ body {
   height: 100%;
   background-color: black;
   color: white;
-  cursor: pointer;
 }
 
-.Cover__button {
+.Cover__plaque {
   margin-left: auto;
   margin-right: auto;
 
@@ -64,8 +63,15 @@ body {
   /*border: 2px solid white;*/
 }
 
-.Cover__button-text {
+.Cover__plaque-text {
   font-size: 25px;
+}
+
+.Cover__button {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 .hide {
